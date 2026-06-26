@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DIDI Finance Design Team 的研究、工具与前沿资讯入口。">
+  <title>FD+ Design Team · FD+</title>
+  <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="fd-site">
+  <canvas class="fluid-grid-canvas" aria-hidden="true"></canvas>
+  <main class="fd-shell">
+    <header class="fd-header" aria-label="FD+ header">
+      <a class="fd-brand" href="index.html" aria-label="FD+ Design Team 首页">
+        <span class="fd-mark" aria-hidden="true">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-b64-src="assets/fd-logo.b64" data-mime="image/png" width="424" height="116" alt="">
+        </span>
+        <span class="fd-script">FD+ Design Team</span>
+      </a>
+    </header>
+
+    <section class="fd-layout" aria-label="FD+ minisite framework">
+      <section class="product-stage" aria-labelledby="fd-title">
+        <h1 class="visually-hidden" id="fd-title">FD+ 工具推荐</h1>
+
+        <div class="product-composition" aria-live="polite">
+          <div class="product-carousel">
+            <a class="product-slide is-active" data-product-index="0" href="http://miao.intra.xiaojukeji.com/" aria-label="打开秒创">
+              <span class="product-orb">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-b64-src="assets/product-miaochuang.b64" data-mime="image/jpeg" alt="秒创 产品图">
+              </span>
+              <span class="product-hover" aria-hidden="true">
+                <span class="hover-radar"></span>
+                <span class="hover-grid"></span>
+                <span class="hover-mark"></span>
+                <span class="hover-particles"></span>
+              </span>
+            </a><a class="product-slide" data-product-index="1" href="http://ying.intra.xiaojukeji.com/" aria-label="打开影创">
+              <span class="product-orb">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-b64-src="assets/product-yingchuang.b64" data-mime="image/jpeg" alt="影创 产品图">
+              </span>
+              <span class="product-hover" aria-hidden="true">
+                <span class="hover-radar"></span>
+                <span class="hover-grid"></span>
+                <span class="hover-mark"></span>
+                <span class="hover-particles"></span>
+              </span>
+            </a>
+          </div>
+
+          <a class="product-info" data-product-link href="http://miao.intra.xiaojukeji.com/" target="_blank" rel="noreferrer" aria-label="打开秒创">
+            <div class="product-copy">
+              <h2>
+                <span data-product-name>秒创</span>
+              </h2>
+              <p class="product-title" data-product-title>AI 自动生图工具</p>
+              <p data-product-summary>个性化用户设计，活动主图、资源位、传播图、批量生成多版本，适配司乘两端。</p>
+            </div>
+            <span class="product-link">
+              <span>ENTER</span>
+              <i aria-hidden="true"></i>
+            </span>
+          </a>
+
+          <div class="product-controls" aria-label="产品切换">
+            <button class="product-dot is-active" type="button" data-product-dot="0" aria-label="切换到秒创"></button><button class="product-dot" type="button" data-product-dot="1" aria-label="切换到影创"></button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="feed-panel" aria-label="AI、金融、设计资讯 Feed">
+        <div class="feed-date">
+          <span data-feed-date>Loading</span>
+          <div class="feed-actions">
+            <button class="feed-refresh" type="button">刷新</button>
+            <a href="https://yehloolau-afk.github.io/designer-tool/ai-station.html" target="_blank" rel="noreferrer">浏览器查看</a>
+          </div>
+        </div>
+        <div class="feed-tabs" role="tablist" aria-label="资讯分类">
+          <button class="feed-tab is-active" type="button" role="tab" aria-selected="true" data-tab="ai"><span>AI</span><time>06.18</time></button>
+          <button class="feed-tab" type="button" role="tab" aria-selected="false" data-tab="finance"><span>金融</span><time>06.18</time></button>
+          <button class="feed-tab" type="button" role="tab" aria-selected="false" data-tab="design"><span>设计</span><time>06.18</time></button>
+        </div>
+        <div class="feed-list" aria-live="polite"></div>
+      </aside>
+    </section>
+
+    <nav class="tool-dock" aria-label="FD+ content shortcuts">
+      <a href="http://miao.intra.xiaojukeji.com/" target="_blank" rel="noreferrer">
+        <strong>秒创</strong>
+        <span>AI Image Studio</span>
+      </a><a href="http://ying.intra.xiaojukeji.com/" target="_blank" rel="noreferrer">
+        <strong>影创</strong>
+        <span>AI Video Studio</span>
+      </a><a href="http://10.193.104.102:8001/" target="_blank" rel="noreferrer">
+        <strong>万相门工具大全</strong>
+        <span>Tool Directory</span>
+      </a><a href="https://cooper.didichuxing.com/knowledge/2202213537030/2207046830798" target="_blank" rel="noreferrer">
+        <strong>FD+AI 放大器</strong>
+        <span>FD+ AI Amplifier</span>
+      </a><a href="#archive">
+        <strong>资料库</strong>
+        <span>Archive</span>
+      </a>
+    </nav>
+  </main>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
