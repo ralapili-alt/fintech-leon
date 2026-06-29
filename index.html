@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="fd-site">
-  <canvas class="fluid-grid-canvas" aria-hidden="true"></canvas>
+  <canvas id="canvas" class="fluid-grid-canvas" aria-hidden="true"></canvas>
   <main class="fd-shell">
     <header class="fd-header" aria-label="FD+ header">
       <a class="fd-brand" href="index.html" aria-label="FD+ Design Team 首页">
@@ -24,48 +24,15 @@
       <section class="product-stage" aria-labelledby="fd-title">
         <h1 class="visually-hidden" id="fd-title">FD+ 工具推荐</h1>
 
-        <div class="product-composition" aria-live="polite">
-          <div class="product-carousel">
-            <a class="product-slide is-active" data-product-index="0" href="http://miao.intra.xiaojukeji.com/" aria-label="打开秒创">
-              <span class="product-orb">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-b64-src="assets/product-miaochuang.b64" data-mime="image/jpeg" alt="秒创 产品图">
-              </span>
-              <span class="product-hover" aria-hidden="true">
-                <span class="hover-radar"></span>
-                <span class="hover-grid"></span>
-                <span class="hover-mark"></span>
-                <span class="hover-particles"></span>
-              </span>
-            </a><a class="product-slide" data-product-index="1" href="http://ying.intra.xiaojukeji.com/" aria-label="打开影创">
-              <span class="product-orb">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-b64-src="assets/product-yingchuang.b64" data-mime="image/jpeg" alt="影创 产品图">
-              </span>
-              <span class="product-hover" aria-hidden="true">
-                <span class="hover-radar"></span>
-                <span class="hover-grid"></span>
-                <span class="hover-mark"></span>
-                <span class="hover-particles"></span>
-              </span>
-            </a>
-          </div>
-
-          <a class="product-info" data-product-link href="http://miao.intra.xiaojukeji.com/" target="_blank" rel="noreferrer" aria-label="打开秒创">
-            <div class="product-copy">
-              <h2>
-                <span data-product-name>秒创</span>
-              </h2>
-              <p class="product-title" data-product-title>AI 自动生图工具</p>
-              <p data-product-summary>个性化用户设计，活动主图、资源位、传播图、批量生成多版本，适配司乘两端。</p>
-            </div>
-            <span class="product-link">
-              <span>ENTER</span>
-              <i aria-hidden="true"></i>
-            </span>
+        <div class="product-composition product-showcase" aria-live="polite">
+          <a class="product-info product-hero-link" data-product-link href="http://miao.intra.xiaojukeji.com/" target="_blank" rel="noreferrer" aria-label="打开秒创">
+            <h2 class="product-statement" data-product-name aria-label="秒创">
+              <span class="product-name-primary" data-product-name-primary data-word="秒">秒</span>
+              <span class="product-name-secondary" data-product-name-secondary>创</span>
+            </h2>
+            <p class="product-title" data-product-title>AI 自动生图工具</p>
+            <p class="product-summary" data-product-summary>个性化用户设计，活动主图、资源位、传播图、批量生成多版本，适配司乘两端。</p>
           </a>
-
-          <div class="product-controls" aria-label="产品切换">
-            <button class="product-dot is-active" type="button" data-product-dot="0" aria-label="切换到秒创"></button><button class="product-dot" type="button" data-product-dot="1" aria-label="切换到影创"></button>
-          </div>
         </div>
       </section>
 
@@ -99,13 +66,268 @@
       </a><a href="https://cooper.didichuxing.com/knowledge/2202213537030/2207046830798" target="_blank" rel="noreferrer">
         <strong>FD+AI 放大器</strong>
         <span>FD+ AI Amplifier</span>
-      </a><a href="#archive">
-        <strong>资料库</strong>
-        <span>Archive</span>
+      </a><a href="https://lmqinsydney-lab.github.io/coding-learning/#/" target="_blank" rel="noreferrer">
+        <strong>coding入门</strong>
+        <span>Coding Starter</span>
       </a>
     </nav>
   </main>
 
-  <script src="assets/app.js" defer></script>
+  <script type="module">
+    const feedData = {"ai":[{"type":"AI","title":"多模态生成进入生产工具链","summary":"从单点生成走向图文视频联动，设计团队需要重新定义素材生产和审核流程。","time":"06.18 09:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"秒创：批量生成多版本传播图","summary":"个性化用户设计，活动主图、资源位、传播图，适配司乘两端。","time":"06.17 18:20","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Method","title":"AI 设计产物的可用性检查清单","summary":"重点关注品牌一致性、文字准确性、合规边界和跨端展示质量。","time":"06.15 11:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Model","title":"视频生成工具开始进入设计评审流程","summary":"动态脚本、节奏预览和多版本对比正在成为活动物料前期探索的一部分。","time":"06.14 16:40","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}],"finance":[{"type":"Finance","title":"金融产品体验的信任感正在前置","summary":"解释成本、风险提示和状态反馈正在从交易末端前移到决策入口。","time":"06.18 08:45","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Case","title":"复杂金融信息的轻量化表达","summary":"通过层级、摘要和可展开详情，把高密度信息变成可扫描的决策界面。","time":"06.16 14:10","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Research","title":"面向低频高风险任务的确认体验","summary":"对转账、授信、保险等场景，确认页需要承担解释、纠错和留痕职责。","time":"06.13 10:15","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Signal","title":"财富、信贷、保险场景里的信息密度控制","summary":"把摘要、风险、下一步动作拆成不同阅读层级，降低用户决策负担。","time":"06.12 19:05","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}],"design":[{"type":"Design","title":"深色阅读界面规范草案","summary":"用克制的黑色背景和浅灰内容容器，兼顾品牌调性与长时间阅读舒适度。","time":"06.18 12:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"影创：自动化视频创作","summary":"把合规审查约束写入创意流程，在缝隙中找到营销爆点的突破口。","time":"06.17 20:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Event","title":"季度工具分享会预告位","summary":"后续可以放内部 workshop、外部分享或团队研究发布活动。","time":"06.11 15:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Craft","title":"产品工具页的展示素材应该先讲结果","summary":"让用户先看到可交付的图和视频，再解释生成流程与工具能力。","time":"06.10 13:25","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}]};
+    const feedSources = {"ai":"https://yehloolau-afk.github.io/designer-tool/data/featured.json","finance":"https://yehloolau-afk.github.io/designer-tool/data/daily.json","design":"https://yehloolau-afk.github.io/designer-tool/data/design.json"};
+    const products = [{"name":"秒创","title":"AI 自动生图工具","summary":"个性化用户设计，活动主图、资源位、传播图、批量生成多版本，适配司乘两端。","keywords":["秒","创"],"href":"http://miao.intra.xiaojukeji.com/"},{"name":"影创","title":"AI 自动化视频创作","summary":"有好的想法，合规审查约束条件已写入，在这些缝隙中找到创意和营销爆点的突破口。","keywords":["影","创"],"href":"http://ying.intra.xiaojukeji.com/"}];
+    const feedList = document.querySelector(".feed-list");
+    const tabButtons = Array.from(document.querySelectorAll(".feed-tab"));
+    const feedDate = document.querySelector("[data-feed-date]");
+    const refreshButton = document.querySelector(".feed-refresh");
+    const productName = document.querySelector("[data-product-name]");
+    const productNamePrimary = document.querySelector("[data-product-name-primary]");
+    const productNameSecondary = document.querySelector("[data-product-name-secondary]");
+    const productTitle = document.querySelector("[data-product-title]");
+    const productSummary = document.querySelector("[data-product-summary]");
+    const productLink = document.querySelector("[data-product-link]");
+    const fluidCanvas = document.querySelector(".fluid-grid-canvas");
+    let productIndex = 0;
+    let activeFeedTab = "ai";
+
+    function hydrateImageAssets() {
+      document.querySelectorAll('[data-b64-src]').forEach(async (img) => {
+        try {
+          const response = await fetch(img.dataset.b64Src, { cache: 'force-cache' });
+          if (!response.ok) return;
+          const content = (await response.text()).trim();
+          img.src = 'data:' + img.dataset.mime + ';base64,' + content;
+        } catch (error) {}
+      });
+    }
+
+    function stripHtml(value) {
+      return String(value || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+    }
+
+    function formatDate(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      const pad = (num) => String(num).padStart(2, "0");
+      return pad(date.getMonth() + 1) + "." + pad(date.getDate()) + " " + pad(date.getHours()) + ":" + pad(date.getMinutes());
+    }
+
+    function formatUpdated(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "Live Feed";
+      const pad = (num) => String(num).padStart(2, "0");
+      return date.getFullYear() + "." + pad(date.getMonth() + 1) + "." + pad(date.getDate());
+    }
+
+    function formatTabDate(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      const pad = (num) => String(num).padStart(2, "0");
+      return pad(date.getMonth() + 1) + "." + pad(date.getDate());
+    }
+
+    function normalizeFeedItems(items) {
+      return items.slice(0, 18).map((item) => ({
+        type: item.source || item.author || "Feed",
+        title: stripHtml(item.title || "Untitled"),
+        summary: stripHtml(item.description || item.content || item.contentSnippet || "").slice(0, 96),
+        time: formatDate(item.pubDate || item.isoDate || item.published || item.date),
+        href: item.link || item.guid || "https://yehloolau-afk.github.io/designer-tool/ai-station.html",
+      }));
+    }
+
+    function renderFeed(tab) {
+      feedList.innerHTML = feedData[tab].map((item) => {
+        return '<a class="feed-item" href="' + item.href + '" target="_blank" rel="noreferrer">' +
+          '<div class="feed-item-meta"><span>' + item.type + '</span><time>' + item.time + '</time></div>' +
+          '<h3>' + item.title + '</h3>' +
+          '<p>' + item.summary + '</p>' +
+          '<span class="feed-more">查看原文</span>' +
+        '</a>';
+      }).join("");
+    }
+
+    async function loadFeed(tab, options = {}) {
+      activeFeedTab = tab;
+      const source = feedSources[tab];
+      if (!source) {
+        renderFeed(tab);
+        return;
+      }
+
+      if (options.manual) refreshButton.textContent = "刷新中";
+      try {
+        const response = await fetch(source + (options.manual ? "?t=" + Date.now() : ""), { cache: options.manual ? "no-store" : "default" });
+        if (!response.ok) throw new Error("Feed HTTP " + response.status);
+        const data = await response.json();
+        if (!Array.isArray(data.items)) throw new Error("Feed items missing");
+        feedData[tab] = normalizeFeedItems(data.items);
+        feedDate.textContent = formatUpdated(data.updated);
+        const tabTime = document.querySelector('.feed-tab[data-tab="' + tab + '"] time');
+        if (tabTime) tabTime.textContent = formatTabDate(data.updated) || tabTime.textContent;
+        renderFeed(tab);
+      } catch (error) {
+        feedDate.textContent = "Fallback";
+        renderFeed(tab);
+      } finally {
+        refreshButton.textContent = "刷新";
+      }
+    }
+
+    function setProduct(index) {
+      productIndex = index;
+      const product = products[index];
+      productName.setAttribute("aria-label", product.name);
+      productNamePrimary.textContent = product.keywords[0];
+      productNamePrimary.dataset.word = product.keywords[0];
+      productNameSecondary.textContent = product.keywords[1];
+      productTitle.textContent = product.title;
+      productSummary.textContent = product.summary;
+      productLink.href = product.href;
+      productLink.setAttribute("aria-label", "打开" + product.name);
+    }
+
+    async function startFluidGrid() {
+      if (!fluidCanvas) return;
+
+      try {
+        const [THREE, skyModule] = await Promise.all([
+          import("https://cdn.skypack.dev/three@0.136.0"),
+          import("https://cdn.skypack.dev/three@0.136.0/examples/jsm/objects/Sky.js"),
+        ]);
+        const { Sky } = skyModule;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
+        const backgroundOffset = 200;
+        const renderHeight = () => window.innerHeight + backgroundOffset;
+        const renderer = new THREE.WebGLRenderer({ canvas: fluidCanvas, antialias: true, powerPreference: "high-performance" });
+        renderer.setSize(window.innerWidth, renderHeight());
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 0.34;
+
+        const sky = new Sky();
+        sky.scale.setScalar(10000);
+        scene.add(sky);
+
+        const skyUniforms = sky.material.uniforms;
+        skyUniforms.turbidity.value = 10;
+        skyUniforms.rayleigh.value = 5;
+        skyUniforms.mieCoefficient.value = 0.005;
+        skyUniforms.mieDirectionalG.value = 0.8;
+
+        const sunPosition = new THREE.Vector3();
+        const sunLight = new THREE.DirectionalLight(0xffffff, 1.6);
+        scene.add(sunLight);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.16));
+
+        const waterGeo = new THREE.PlaneGeometry(500, 500, 150, 150);
+        const waterMat = new THREE.MeshStandardMaterial({
+          color: 0x001e0f,
+          roughness: 0.1,
+          metalness: 0.95,
+        });
+        const water = new THREE.Mesh(waterGeo, waterMat);
+        water.rotation.x = -Math.PI / 2;
+        water.position.y = -5;
+        scene.add(water);
+
+        camera.aspect = window.innerWidth / renderHeight();
+        camera.updateProjectionMatrix();
+        camera.position.set(0, 5, 50);
+        camera.lookAt(0, 0, -100);
+
+        let mouseY = -0.04;
+        let frame = 0;
+        const clock = new THREE.Clock();
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function updateSun() {
+          const phi = THREE.MathUtils.degToRad(90 - (mouseY * 20 + 2));
+          const theta = THREE.MathUtils.degToRad(180);
+          sunPosition.setFromSphericalCoords(1, phi, theta);
+          sky.material.uniforms.sunPosition.value.copy(sunPosition);
+          sunLight.position.copy(sunPosition).multiplyScalar(100);
+
+          const elevation = 90 - THREE.MathUtils.radToDeg(phi);
+          if (elevation > 5) {
+            renderer.toneMappingExposure = 0.34;
+          } else if (elevation > -5) {
+            renderer.toneMappingExposure = THREE.MathUtils.lerp(0.08, 0.34, (elevation + 5) / 10);
+          } else {
+            renderer.toneMappingExposure = 0.08;
+          }
+        }
+
+        function animate() {
+          frame = window.requestAnimationFrame(animate);
+          const time = reducedMotion ? 0.5 : clock.getElapsedTime();
+          const positionAttribute = waterGeo.attributes.position;
+
+          for (let i = 0; i < positionAttribute.count; i += 1) {
+            const u = positionAttribute.getX(i);
+            const v = positionAttribute.getY(i);
+            const z =
+              Math.sin(u * 0.1 + time * 1.5) * 1.2 +
+              Math.cos(v * 0.1 + time * 1.5) * 1.2;
+            positionAttribute.setZ(i, z);
+          }
+
+          waterGeo.computeVertexNormals();
+          positionAttribute.needsUpdate = true;
+          updateSun();
+          renderer.render(scene, camera);
+        }
+
+        function resize() {
+          camera.aspect = window.innerWidth / renderHeight();
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, renderHeight());
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        }
+
+        window.addEventListener("resize", resize);
+        window.addEventListener("pointermove", (event) => {
+          mouseY = THREE.MathUtils.clamp((event.clientY / Math.max(1, window.innerHeight) - 0.5) * 0.45, -0.18, 0.12);
+        }, { passive: true });
+
+        updateSun();
+        animate();
+        window.addEventListener("pagehide", () => {
+          window.cancelAnimationFrame(frame);
+          renderer.dispose();
+          waterGeo.dispose();
+          waterMat.dispose();
+        }, { once: true });
+      } catch (error) {
+        console.warn("Three.js background failed to load", error);
+      }
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach((item) => {
+          item.classList.toggle("is-active", item === button);
+          item.setAttribute("aria-selected", String(item === button));
+        });
+        loadFeed(button.dataset.tab);
+      });
+    });
+
+    refreshButton.addEventListener("click", () => {
+      loadFeed(activeFeedTab, { manual: true });
+    });
+
+    window.setInterval(() => {
+      setProduct((productIndex + 1) % products.length);
+    }, 10000);
+
+    hydrateImageAssets();
+    setProduct(0);
+    loadFeed("ai");
+    startFluidGrid();
+  </script>
 </body>
 </html>
