@@ -182,7 +182,7 @@ a {
 .product-stage {
   position: relative;
   display: grid;
-  min-height: min(685px, calc(100vh - 212px));
+  min-height: max(520px, calc(100vh - 215px));
   align-content: center;
   min-width: 0;
   overflow: hidden;
@@ -884,7 +884,9 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  max-height: min(685px, calc(100vh - 212px));
+  height: max(520px, calc(100vh - 215px));
+  max-height: none;
+  overflow: hidden;
   padding: 14px;
   border-radius: 2px;
   border: 1px solid rgba(var(--accent-rgb), 0.16);
@@ -989,7 +991,9 @@ a {
 
 .feed-list {
   display: grid;
+  flex: 1 1 auto;
   align-content: start;
+  min-height: 0;
   gap: 10px;
   margin-top: 12px;
   overflow-y: auto;
@@ -1193,12 +1197,30 @@ a {
   }
 }
 
-@media (max-width: 1180px) {
-  .fd-layout {
-    grid-template-columns: 1fr;
+@media (min-width: 1181px) and (min-height: 980px) {
+  .product-stage {
+    min-height: max(520px, calc(100vh - 218px));
   }
 
   .feed-panel {
+    height: max(520px, calc(100vh - 218px));
+  }
+}
+
+@media (max-width: 1180px) {
+  .fd-layout {
+    align-self: start;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .product-stage {
+    height: auto;
+    min-height: 0;
+  }
+
+  .feed-panel {
+    height: max(520px, calc(100vh - 212px));
     min-height: 0;
     max-height: none;
   }
