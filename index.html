@@ -36,17 +36,17 @@
         </div>
       </section>
 
-      <aside class="feed-panel" aria-label="AI、金融、设计资讯 Feed">
+      <aside class="feed-panel" aria-label="AI、视频、设计资讯 Feed">
         <div class="feed-date">
           <span data-feed-date>Loading</span>
           <div class="feed-actions">
             <button class="feed-refresh" type="button">刷新</button>
-            <a href="https://yehloolau-afk.github.io/designer-tool/ai-station.html" target="_blank" rel="noreferrer">浏览器查看</a>
+            <a data-feed-source-link href="https://yehloolau-afk.github.io/designer-tool/ai-station.html" target="_blank" rel="noreferrer">浏览器查看</a>
           </div>
         </div>
         <div class="feed-tabs" role="tablist" aria-label="资讯分类">
           <button class="feed-tab is-active" type="button" role="tab" aria-selected="true" data-tab="ai"><span>AI</span><time>06.18</time></button>
-          <button class="feed-tab" type="button" role="tab" aria-selected="false" data-tab="finance"><span>金融</span><time>06.18</time></button>
+          <button class="feed-tab" type="button" role="tab" aria-selected="false" data-tab="video"><span>视频</span><time>06.26</time></button>
           <button class="feed-tab" type="button" role="tab" aria-selected="false" data-tab="design"><span>设计</span><time>06.18</time></button>
         </div>
         <div class="feed-list" aria-live="polite"></div>
@@ -74,12 +74,14 @@
   </main>
 
   <script type="module">
-    const feedData = {"ai":[{"type":"AI","title":"多模态生成进入生产工具链","summary":"从单点生成走向图文视频联动，设计团队需要重新定义素材生产和审核流程。","time":"06.18 09:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"秒创：批量生成多版本传播图","summary":"个性化用户设计，活动主图、资源位、传播图，适配司乘两端。","time":"06.17 18:20","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Method","title":"AI 设计产物的可用性检查清单","summary":"重点关注品牌一致性、文字准确性、合规边界和跨端展示质量。","time":"06.15 11:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Model","title":"视频生成工具开始进入设计评审流程","summary":"动态脚本、节奏预览和多版本对比正在成为活动物料前期探索的一部分。","time":"06.14 16:40","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}],"finance":[{"type":"Finance","title":"金融产品体验的信任感正在前置","summary":"解释成本、风险提示和状态反馈正在从交易末端前移到决策入口。","time":"06.18 08:45","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Case","title":"复杂金融信息的轻量化表达","summary":"通过层级、摘要和可展开详情，把高密度信息变成可扫描的决策界面。","time":"06.16 14:10","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Research","title":"面向低频高风险任务的确认体验","summary":"对转账、授信、保险等场景，确认页需要承担解释、纠错和留痕职责。","time":"06.13 10:15","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Signal","title":"财富、信贷、保险场景里的信息密度控制","summary":"把摘要、风险、下一步动作拆成不同阅读层级，降低用户决策负担。","time":"06.12 19:05","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}],"design":[{"type":"Design","title":"深色阅读界面规范草案","summary":"用克制的黑色背景和浅灰内容容器，兼顾品牌调性与长时间阅读舒适度。","time":"06.18 12:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"影创：自动化视频创作","summary":"把合规审查约束写入创意流程，在缝隙中找到营销爆点的突破口。","time":"06.17 20:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Event","title":"季度工具分享会预告位","summary":"后续可以放内部 workshop、外部分享或团队研究发布活动。","time":"06.11 15:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Craft","title":"产品工具页的展示素材应该先讲结果","summary":"让用户先看到可交付的图和视频，再解释生成流程与工具能力。","time":"06.10 13:25","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}]};
-    const feedSources = {"ai":"https://yehloolau-afk.github.io/designer-tool/data/featured.json","finance":"https://yehloolau-afk.github.io/designer-tool/data/daily.json","design":"https://yehloolau-afk.github.io/designer-tool/data/design.json"};
+    const feedData = {"ai":[{"type":"AI","title":"多模态生成进入生产工具链","summary":"从单点生成走向图文视频联动，设计团队需要重新定义素材生产和审核流程。","time":"06.18 09:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"秒创：批量生成多版本传播图","summary":"个性化用户设计，活动主图、资源位、传播图，适配司乘两端。","time":"06.17 18:20","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Method","title":"AI 设计产物的可用性检查清单","summary":"重点关注品牌一致性、文字准确性、合规边界和跨端展示质量。","time":"06.15 11:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Model","title":"视频生成工具开始进入设计评审流程","summary":"动态脚本、节奏预览和多版本对比正在成为活动物料前期探索的一部分。","time":"06.14 16:40","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}],"video":[{"type":"Video","title":"AI 视频创作进入工具工作流","summary":"从脚本、分镜到生成预览，视频类工具正在进入更完整的创意生产链路。","time":"06.26 19:40","href":"https://yehloolau-afk.github.io/ai-news-station/"},{"type":"Video","title":"AI 原生团队的视频访谈与案例","summary":"关注 AI 产品、创意工具和开发者工作流中的新方法与实践案例。","time":"06.26 18:30","href":"https://yehloolau-afk.github.io/ai-news-station/"},{"type":"YouTube","title":"设计、产品与模型能力的视频更新","summary":"用短视频和访谈形式追踪 AI 图像、视频、Codex 与多模态工具的变化。","time":"06.25 20:00","href":"https://yehloolau-afk.github.io/ai-news-station/"},{"type":"Video","title":"AI 资讯站视频频道持续更新","summary":"集中读取 AI 视频频道，适合快速浏览产品发布、访谈和工具演示。","time":"06.24 19:05","href":"https://yehloolau-afk.github.io/ai-news-station/"}],"design":[{"type":"Design","title":"深色阅读界面规范草案","summary":"用克制的黑色背景和浅灰内容容器，兼顾品牌调性与长时间阅读舒适度。","time":"06.18 12:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Tool","title":"影创：自动化视频创作","summary":"把合规审查约束写入创意流程，在缝隙中找到营销爆点的突破口。","time":"06.17 20:30","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Event","title":"季度工具分享会预告位","summary":"后续可以放内部 workshop、外部分享或团队研究发布活动。","time":"06.11 15:00","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"},{"type":"Craft","title":"产品工具页的展示素材应该先讲结果","summary":"让用户先看到可交付的图和视频，再解释生成流程与工具能力。","time":"06.10 13:25","href":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"}]};
+    const feedSources = {"ai":"https://yehloolau-afk.github.io/designer-tool/data/featured.json","video":"https://yehloolau-afk.github.io/designer-tool/data/videos.json","design":"https://yehloolau-afk.github.io/designer-tool/data/design.json"};
+    const feedSourceLinks = {"ai":"https://yehloolau-afk.github.io/designer-tool/ai-station.html","video":"https://yehloolau-afk.github.io/ai-news-station/","design":"https://yehloolau-afk.github.io/designer-tool/ai-station.html"};
     const products = [{"name":"秒创","title":"AI 自动生图工具","summary":"个性化用户设计，活动主图、资源位、传播图、批量生成多版本，适配司乘两端。","keywords":["秒","创"],"href":"http://miao.intra.xiaojukeji.com/"},{"name":"影创","title":"AI 自动化视频创作","summary":"有好的想法，合规审查约束条件已写入，在这些缝隙中找到创意和营销爆点的突破口。","keywords":["影","创"],"href":"http://ying.intra.xiaojukeji.com/"}];
     const feedList = document.querySelector(".feed-list");
     const tabButtons = Array.from(document.querySelectorAll(".feed-tab"));
     const feedDate = document.querySelector("[data-feed-date]");
+    const feedSourceLink = document.querySelector("[data-feed-source-link]");
     const refreshButton = document.querySelector(".feed-refresh");
     const productName = document.querySelector("[data-product-name]");
     const productNamePrimary = document.querySelector("[data-product-name-primary]");
@@ -128,7 +130,7 @@
     }
 
     function normalizeFeedItems(items) {
-      return items.slice(0, 18).map((item) => ({
+      return items.slice(0, 30).map((item) => ({
         type: item.source || item.author || "Feed",
         title: stripHtml(item.title || "Untitled"),
         summary: stripHtml(item.description || item.content || item.contentSnippet || "").slice(0, 96),
@@ -150,6 +152,7 @@
 
     async function loadFeed(tab, options = {}) {
       activeFeedTab = tab;
+      if (feedSourceLink && feedSourceLinks[tab]) feedSourceLink.href = feedSourceLinks[tab];
       const source = feedSources[tab];
       if (!source) {
         renderFeed(tab);
